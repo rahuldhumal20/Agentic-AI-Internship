@@ -1,3 +1,3 @@
-# Agentic AI Internship – February 2026
+# Data Science Internship – February 2026 
 
-This is Logic Building Task – 3
+ Data Processing and Analysis (Task 3)
