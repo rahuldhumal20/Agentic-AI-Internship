@@ -179,6 +179,6 @@ February 2026
 
 **Rahul Dhumal**
 
-M.Sc. computer Application
-Agentic AI - Intern | full Stack Developer
+M.Sc. computer Application |
+Agentic AI - Intern | Full Stack Developer |
 Innomatics Research Labs
