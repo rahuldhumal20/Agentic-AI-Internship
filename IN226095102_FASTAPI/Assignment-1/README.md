@@ -1,4 +1,4 @@
-# FastAPI Day 1 Assignment 🚀
+# FastAPI Day 1 Assignment 
 
 This repository contains my solutions for the **FastAPI Day 1 Practice Tasks** as part of the **Agentic AI Internship – February 2026**.
 
@@ -6,7 +6,7 @@ The assignment focuses on building basic REST APIs using **FastAPI**, working wi
 
 ---
 
-## 📌 Technologies Used
+##  Technologies Used
 
 * Python 3
 * FastAPI
@@ -15,7 +15,7 @@ The assignment focuses on building basic REST APIs using **FastAPI**, working wi
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Agentic-AI-Internship
@@ -33,7 +33,7 @@ Agentic-AI-Internship
 
 ---
 
-## ⚙️ How to Run the Project
+##  How to Run the Project
 
 1. Clone the repository
 
@@ -81,9 +81,9 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 🧠 Implemented Endpoints
+##  Implemented Endpoints
 
-### 1️⃣ Get All Products
+### 1. Get All Products
 
 ```
 GET /products
@@ -93,7 +93,7 @@ Returns all products and total count.
 
 ---
 
-### 2️⃣ Filter Products by Category
+### 2. Filter Products by Category
 
 ```
 GET /products/category/{category_name}
@@ -110,7 +110,7 @@ Returns products belonging to a specific category.
 
 ---
 
-### 3️⃣ Get In-Stock Products
+### 3. Get In-Stock Products
 
 ```
 GET /products/instock
@@ -120,7 +120,7 @@ Returns only available products and their count.
 
 ---
 
-### 4️⃣ Store Summary
+### 4. Store Summary
 
 ```
 GET /store/summary
@@ -135,7 +135,7 @@ Returns:
 
 ---
 
-### 5️⃣ Search Products by Name
+### 5. Search Products by Name
 
 ```
 GET /products/search/{keyword}
@@ -152,7 +152,7 @@ Search is **case-insensitive**.
 
 ---
 
-## ⭐ Bonus Endpoint
+##  Bonus Endpoint
 
 ### Product Deals
 
@@ -166,19 +166,3 @@ Returns:
 * Most expensive product (Premium Pick)
 
 ---
-
-## 📅 Internship
-
-Agentic AI Internship
-FastAPI Training – Day 1 Assignment
-February 2026
-
----
-
-## 👨‍💻 Author
-
-**Rahul Dhumal**
-
-M.Sc. computer Application |
-Agentic AI - Intern | Full Stack Developer |
-Innomatics Research Labs
