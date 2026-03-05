@@ -27,6 +27,7 @@ Agentic-AI-Internship
       ├── Q3_Output.png
       ├── Q4_Output.png
       ├── Q5_Output.png
+      |── Swagger_UI.png
       └── Bonus_Output.png
 ```
 
@@ -166,21 +167,6 @@ Returns:
 
 ---
 
-## 📸 Output Screenshots
-
-Each question’s output was tested using **Swagger UI** and screenshots are included in the repository.
-
-Example files:
-
-* `Q1_Output.png`
-* `Q2_Output.png`
-* `Q3_Output.png`
-* `Q4_Output.png`
-* `Q5_Output.png`
-* `Bonus_Output.png`
-
----
-
 ## 📅 Internship
 
 Agentic AI Internship
@@ -193,5 +179,6 @@ February 2026
 
 **Rahul Dhumal**
 
-M.Sc. Computer Applications
-Full Stack Developer | MERN Stack | FastAPI
+M.Sc. computer Application
+Agentic AI - Intern | full Stack Developer
+Innomatics Research Labs
