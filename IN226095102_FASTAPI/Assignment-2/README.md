@@ -6,7 +6,7 @@ The assignment focuses on implementing **query parameters, POST APIs, Pydantic v
 
 
 
-# ⚙️ How to Run the Project
+#  How to Run the Project
 
 1️⃣ Activate virtual environment
 
@@ -34,7 +34,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# 🧠 Implemented Endpoints
+#  Implemented Endpoints
 
 ## 1️⃣ Filter Products by Minimum Price
 
@@ -144,7 +144,7 @@ Example response:
 
 ---
 
-# ⭐ Bonus Feature – Order Status Tracking
+#  Bonus Feature – Order Status Tracking
 
 ### Place Order
 
@@ -172,7 +172,7 @@ Updates order status from **pending → confirmed**.
 
 ---
 
-# 📸 Output Screenshots
+#  Output Screenshots
 
 Screenshots of API responses are included for evaluation.
 
