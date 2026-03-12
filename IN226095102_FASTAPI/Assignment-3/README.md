@@ -1,4 +1,4 @@
-# FastAPI Day 4 Assignment – CRUD Operations 
+# FastAPI Day 4 Assignment-3 – CRUD Operations 
 
 This folder contains the implementation of **FastAPI Day 4 Practice Tasks** completed during the **Agentic AI Internship – February 2026**.
 
@@ -44,7 +44,7 @@ All APIs were tested using Swagger UI.
 
 #  Implemented Endpoints
 
-## 5️⃣ Product Inventory Audit
+##  Product Inventory Audit
 
 ```
 GET /products/audit
@@ -135,11 +135,3 @@ Example files:
 All endpoints were verified using **Swagger UI**.
 
 ---
-
-# 👨‍💻 Author
-
-**Rahul Dhumal**
-
-M.Sc. Computer Applications
-Full Stack Developer (MERN Stack)
-Agentic AI Internship – February 2026
