@@ -44,7 +44,7 @@ All APIs were tested using Swagger UI.
 
 #  Implemented Endpoints
 
-## 1️⃣ Add Product to Cart
+## 1. Add Product to Cart
 
 ```
 POST /cart/add
@@ -64,7 +64,7 @@ Features:
 
 ---
 
-## 2️⃣ View Cart
+## 2. View Cart
 
 ```
 GET /cart
@@ -88,7 +88,7 @@ Example response:
 
 ---
 
-## 3️⃣ Remove Product from Cart
+## 3. Remove Product from Cart
 
 ```
 DELETE /cart/{product_id}
@@ -106,7 +106,7 @@ Example response:
 
 ---
 
-## 4️⃣ Checkout Cart
+## 4. Checkout Cart
 
 ```
 POST /cart/checkout
@@ -140,7 +140,7 @@ After checkout:
 
 ---
 
-# ⭐ Bonus Case – Empty Cart Checkout
+#  Bonus Case – Empty Cart Checkout
 
 If checkout is attempted when the cart is empty:
 
@@ -160,7 +160,7 @@ Status Code: **400 Bad Request**
 
 ---
 
-# 📸 Output Screenshots
+#  Output Screenshots
 
 Screenshots of API responses are included for evaluation.
 
