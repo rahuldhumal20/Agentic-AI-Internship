@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Query, Response, status
+from fastapi import FastAPI, Query, Response, status, HTTPException
 
 from pydantic import BaseModel, Field
 
@@ -372,11 +372,11 @@ def add_to_cart(
 
     if not product:
 
-        return {'error': 'Product not found'}
+        raise HTTPException(status_code=404, detail="Product not found")
 
     if not product['in_stock']:
-
-        return {'error': f"{product['name']} is out of stock"}
+        
+        raise HTTPException( status_code=400, detail=f"{product['name']} is out of stock" )
 
     if quantity < 1:
 
@@ -517,3 +517,4 @@ def remove_from_cart(product_id: int, response: Response):
     response.status_code = status.HTTP_404_NOT_FOUND
 
     return {'error': 'Product not in cart'}
+
