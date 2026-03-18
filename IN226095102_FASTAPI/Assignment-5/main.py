@@ -126,8 +126,16 @@ def sort_products(
         'order':    order,
         'products': sorted_products,
     }
+#________________________Sort by Category___________________________
+
+@app.get('/product/sort-by-category')
+def sort_by_category():
+    result = sorted(products, key=lambda p:(p['category'], p['price']))
+
+    return {'product': result, 'total': len(result)}
 
 # ── Day 6 — Step 23: Pagination ───────────────────────────────────
+
 @app.get('/products/page')
 def get_products_paged(
     page:  int = Query(1, ge=1,  description='Page number'),
@@ -163,6 +171,56 @@ def add_product(new_product: NewProduct, response: Response):
     products.append(product)
     response.status_code = status.HTTP_201_CREATED
     return {'message': 'Product added', 'product': product}
+
+#________________________Search + Sort + Paginate_____________________
+
+@app.get('/products/browse')
+def browse_products(
+    keyword: str = Query(None),
+    sort_by: str = Query('price'),
+    order: str = Query('asc'),
+    page: int = Query(1, ge=1),
+    limit: int = Query(4, ge=1, le=20)
+):
+    #________search_______
+    result = products
+
+    if keyword:
+        keyword = keyword.strip().lower()
+        result = [
+            p for p in result
+            if keyword in p['name'].lower()
+        ]
+    #_______Sort______________
+    
+    if sort_by not in ['price', 'name']:
+        return {'error': "sort_by must be 'price' or 'name'"}
+
+    if order not in ['asc', 'desc']:
+        return {'error': "order must be 'asc' or 'desc'"}
+
+    result = sorted(
+        result,
+        key=lambda p: p[sort_by],
+        reverse=(order == 'desc')
+    )
+
+    #____________Pagination_______________
+
+    total = len(result)
+    start = (page - 1) * limit
+    paged = result[start : start + limit]
+    return { 
+        'keyword': keyword,
+        'sort_by': sort_by,
+        'order': order, 'page': page,
+        'limit': limit,
+        'total_found': total,
+        'total_pages': -(- total // limit),
+        'products': paged,
+    }
+
+
 
 @app.put('/products/{product_id}')
 def update_product(
@@ -223,6 +281,42 @@ def place_order(order_data: OrderRequest):
 @app.get('/orders')
 def get_all_orders():
     return {'orders': orders, 'total_orders': len(orders)}
+
+#________________________Search The Orders List Ass-5 Q4 _________________________
+@app.get('/orders/search')
+def search_orders(customer_name: str = Query(...)):
+
+    results = [ o for o in orders if customer_name.lower() in o['customer_name'].lower() ]
+    
+    if not results:
+        return {'message': f'No orders found for: {customer_name}'}
+    
+    return {
+        'customer_name': customer_name,
+        'total_found': len(results),
+        'orders': results
+    }
+#___________________Bonus - Paginate the orders List________________
+@app.get('/orders/page')
+def get_orders_paged(
+    page: int = Query(1, ge=1),
+    limit: int = Query(3, ge=1, le=20),
+):
+    start = (page - 1) * limit
+    return{
+        'page': page,
+        'limit': limit,
+        'total': len(orders),
+        'total_pages': -(-len(orders) // limit),
+        'orders': orders[start : start + limit],
+    }
+
+
+
+
+
+
+
 
 # ── Day 5 — Cart ──────────────────────────────────────────────────
 # fixed routes /cart/add and /cart/checkout BEFORE variable /cart/{product_id}
