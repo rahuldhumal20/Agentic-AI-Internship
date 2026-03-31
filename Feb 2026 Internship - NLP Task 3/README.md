@@ -41,9 +41,9 @@ User Input → Tokenization → Transformer Model (DialoGPT) → Response Genera
 
 ---
 ## 🧩 Code Highlights
-Uses AutoTokenizer and AutoModelForCausalLM
-Maintains chat history with token concatenation
-Limits token size to avoid memory overflow
+- Uses AutoTokenizer and AutoModelForCausalLM
+- Maintains chat history with token concatenation
+- Limits token size to avoid memory overflow
 
 
 ## ⚠️ Limitations
