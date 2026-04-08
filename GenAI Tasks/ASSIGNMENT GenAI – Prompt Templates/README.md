@@ -31,16 +31,6 @@ The goal is to simulate a **real-world prompt engineering pipeline**, where user
 
 ---
 
-## 📂 Project Structure
-
-```
-📦 Prompt-Engineering-LangChain
- ┣ 📜 prompt_engine.ipynb
- ┣ 📜 README.md
-```
-
----
-
 ## 🔥 Features Implemented
 
 ### ✅ Task 1: PromptTemplate (Basic)
